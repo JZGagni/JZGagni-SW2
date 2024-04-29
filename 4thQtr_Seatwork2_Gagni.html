@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Calculator</title>
+  <style>
+    /* Add some CSS styles to make the page look better */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: url(https://img.freepik.com/premium-vector/calculator-pencils-background_188544-6127.jpg?w=740);
+      padding: 20px;
+    }
+    form {
+      display: inline-block;
+      margin: 20px auto;
+    }
+    input[type="number"] {
+      width: 100px;
+      margin: 0 10px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .container {
+      width: 50%;
+      margin: 40px auto;
+      background-color: lightyellow;
+      padding: 20px;
+      border: 4px dotted; #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+  </style>
+</head>
+<body>
+    <center><img src="https://i.pinimg.com/originals/a6/ae/72/a6ae72aff13f14f151ff1d016288a09e.gif" alt="Calcute" width="250" height="250"></center>
+    <div class="container">
+  <h1 style="color:Black;">Hi, Im Akshu, your very own Calculator friend! Use this calculator however YOU like!</h1>
+    No. 1:<input type="text" id="num1"><br>
+    <br>
+    No. 2:<input type="text" id="num2"><br>
+    <br>
+    <input type="submit" value="ADD" onclick="add()">
+    <input type="submit" value="SUBTRACT" onclick="subtract()">
+    <input type="submit" value="MULTIPLY" onclick="multiply()">
+    <input type="submit" value="DIVIDE" onclick="divide()">
+    <br>
+    <p style="color:Black;"><strong>Answer:</strong></p>
+    <p style="color:red;" id="ans"></p>
+
+
+    </form>
+  </body>
+</div>
+    <script>
+
+  function add(){
+   var one = document.getElementById("num1").value;
+   var two = document.getElementById("num2").value;
+   var res = Number(one) + Number(two);
+   document.getElementById("ans").innerHTML = res;
+  }
+
+  function subtract(){
+   var one = document.getElementById("num1").value;
+   var two = document.getElementById("num2").value;
+   var res = Number(one) - Number(two);
+   document.getElementById("ans").innerHTML = res;
+  }
+
+  function multiply(){
+   var one = document.getElementById("num1").value;
+   var two = document.getElementById("num2").value;
+   var res = Number(one) * Number(two);
+   document.getElementById("ans").innerHTML = res;
+  }
+
+  function divide(){
+   var one = document.getElementById("num1").value;
+   var two = document.getElementById("num2").value;
+   var res = Number(one) / Number(two);
+   document.getElementById("ans").innerHTML = res;
+  }
+</script>
+</body>
+</html>
